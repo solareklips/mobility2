@@ -32,5 +32,5 @@ def list_jobs():
 if __name__ == "__main__":
   app.run(host='0.0.0.0', debug=True)
 
-# kommet til 1:51:18 i video tutorialen
-# https://www.youtube.com/watch?v=yBDHkveJUf4&t=6447s
+# NÅET TIL 2:39:41 - SKAL TIL AT CONNECTE
+# https://youtu.be/yBDHkveJUf4?si=duRQOHqRL49-ldAQ&t=9581
