@@ -7,8 +7,7 @@ app = Flask(__name__)
 def hello_world():
   jobs = load_jobs_from_db()
   return render_template('home.html',
-                          jobs=jobs,
-                          company_name="SolarEklips")
+                          jobs=jobs)
 
 @app.route("/api/jobs")
 def list_jobs():
@@ -28,5 +27,5 @@ def show_job(id):
 if __name__ == "__main__":
   app.run(host='0.0.0.0', debug=True)
 
-# NÅET TIL 3:34:12 - SKAL TIL AT FIKSE TypeError: Connection.execute() got an unexpected keyword argument 'val'. Noget med at sqlalchemy parameters skal være dict (https://stackoverflow.com/questions/76479491/unexpected-keyword-argument-in-execute-statement)
-# https://www.youtube.com/watch?v=yBDHkveJUf4&t=12659s
+# NÅET TIL 3:43:10
+# https://youtu.be/yBDHkveJUf4?si=RryKtb8Ztq-Hs6Ds&t=13390
