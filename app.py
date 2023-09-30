@@ -24,8 +24,11 @@ def show_job(id):
   return render_template('jobpage.html', 
                         job=job)
 
+@app.route("/job/<id>/apply")
+def apply_to_job(id):
+
 if __name__ == "__main__":
   app.run(host='0.0.0.0', debug=True)
 
-# NÅET TIL 3:43:10
-# https://youtu.be/yBDHkveJUf4?si=RryKtb8Ztq-Hs6Ds&t=13390
+# NÅET TIL 3:58:58 - arbejder i app.py med app.route(...apply)
+# https://youtu.be/yBDHkveJUf4?si=jCnbC-sCk9ziIT8b&t=14338
