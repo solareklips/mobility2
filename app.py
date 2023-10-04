@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, request
 from database import load_jobs_from_db, load_job_from_db
 
 app = Flask(__name__)
@@ -24,11 +24,18 @@ def show_job(id):
   return render_template('jobpage.html', 
                         job=job)
 
-@app.route("/job/<id>/apply")
+@app.route("/job/<id>/apply", methods=['post'])
 def apply_to_job(id):
+  data = request.form
+  job = load_job_from_db(id)
+  # store this in the DB
+  # send an email 
+  return render_template('application_submitted.html', 
+                        application=data, 
+                        job=job)
 
 if __name__ == "__main__":
   app.run(host='0.0.0.0', debug=True)
 
-# NÅET TIL 3:58:58 - arbejder i app.py med app.route(...apply)
-# https://youtu.be/yBDHkveJUf4?si=jCnbC-sCk9ziIT8b&t=14338
+# NÅET TIL 4:15:50 - skal til at gemme formen i DB
+# https://youtu.be/yBDHkveJUf4?si=_aJsAIdRsVQzM6i9&t=15359
