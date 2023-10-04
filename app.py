@@ -37,5 +37,5 @@ def apply_to_job(id):
 if __name__ == "__main__":
   app.run(host='0.0.0.0', debug=True)
 
-# NÅET TIL 4:15:50 - skal til at gemme formen i DB
-# https://youtu.be/yBDHkveJUf4?si=_aJsAIdRsVQzM6i9&t=15359
+# NÅET TIL 4:17:05 - arbejder i workbench
+# https://youtu.be/yBDHkveJUf4?si=XOnv0qilfO4SxBX-&t=15425
